@@ -1,0 +1,30 @@
+#!/bin/bash
+#
+# Purge all dirty data on the CentOS VPS
+#
+# Author: Luigi Mozzillo
+# Version: 1.0
+# Date: 2015-08-05
+
+# Print home disk space before this script
+echo "Before: $(du -sh /home/)"
+
+# Remove all "error_log" file, exclude in virtfs
+echo "Deleting error_log files"
+find /home/ -name "error_log" -type f -not -path "/home/virtfs/*" -exec rm -f '{}' \;
+
+# Remove all "core.NUMERIC" file, exclude in virtfs
+echo "Deleting core.NUMERIC files"
+find /home/ -type f -not -path "/home/virtfs/*" -regextype posix-egrep -regex ".*/core\.([0-9]*)" -exec rm -f '{}' \;
+
+# Remove user tmp cpanel files
+echo "Deleting cPanel files"
+rm -fv /home/*/tmp/Cpanel_*
+
+# Remove cPanel and EasyApache update backup
+echo "Deleting cPanel and EasyApache backup files"
+rm -rf /usr/local/apache.backup*
+rm -rf /home/cpeasyapache
+
+# Print home disk space before this script
+echo "After: $(du -sh /home/)"
