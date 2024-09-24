@@ -6,18 +6,30 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-     <link rel="icon" href="https://samag.tech/credits/favicon.png" sizes="32x32" />
-     <link rel="stylesheet"
-         href="https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700%7CMontserrat%3A200%2C300%2C400%7CInconsolata%7CHind+Madurai%3A400&#038;ver=4.9.8">
+     <link rel="icon" href="https://sf.wedea.it/loghi/wedea/favicon.png" sizes="32x32" />
+     <!-- <link rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Roboto+Slab%3A300%2C400%2C700%7CMontserrat%3A200%2C300%2C400%7CInconsolata%7CHind+Madurai%3A400&#038;ver=4.9.8"> -->
      <title>Wedea Digital</title>
 
      <style>
-         body,
+
+        @font-face {
+            font-family: 'ClashGrotesk';
+            src: url("https://sf.wedea.it/fonts/wedea/ClashGrotesk-Regular.otf") format("opentype");
+        }
+
+        @font-face {
+            font-family: 'ClashGroteskBold';
+            src: url("https://sf.wedea.it/fonts/wedea/ClashGrotesk-Bold.otf") format("opentype");
+        }
+
+        body,
          html {
              height: 100%;
              width: 100%;
              margin: 0 auto;
-             font-family: Roboto Slab;
+             font-family: ClashGrotesk;
+             background-color: #253547;
          }
 
          img {
@@ -26,8 +38,9 @@
          }
 
          a {
-             color:#ec7129;
+             color:#be354f;
              text-decoration: none;
+             font-family: ClashGroteskBold;
              transition: all .1s linear;
          }
 
@@ -36,25 +49,32 @@
              text-decoration: underline;
          }
 
-         .wrap {
+        .wrap {
              height: 100%;
              width: 100%;
-             max-width: 450px;
-             margin: 4rem auto;
-         }
+        }
+
+        p, h3 {
+            color: #E9EADA;
+        }
+
      </style>
  </head>
 
  <body>
 
      <div class="wrap">
-         <div class="brand">
-           <img src="https://sf.samag.tech/loghi/wedea/wedea-logo.png" alt="">
-         </div>
+
          <div class="info">
-             <h3>Dominio registrato</h3>
-             <p>Per info e assistenza visita la pagina <a href="http://supporto.wedea.it">supporto.wedea.it</a>.
-             </p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div class="brand">
+                    <img src="https://sf.wedea.it/loghi/wedea/wedea-pittogramma.png" alt="" width="500px" height="500px">
+                  </div>
+                <h3 style="font-size: 24px;">DOMINIO REGISTRATO</h3>
+                <p style="font-size: 22px; display: inline;">
+                    per info e assistenza visita la pagina <a href="http://supporto.wedea.it">supporto.wedea.it</a>
+                </p>
+            </div>
          </div>
      </div>
 
